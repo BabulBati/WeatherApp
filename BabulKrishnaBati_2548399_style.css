@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 400;
+    background: linear-gradient(to bottom, rgb(97,144,232), rgb(97,144,200));
+    min-height: 100vh;
+    padding: 0 20px;
+    color: #ffffff;
+}
+
+h1.site-title {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    line-height: 130%;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.weather_details {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.location_details {
+    width: 30%;
+    background: rgba(52, 113, 226, 0.8);
+    box-shadow: 4px 2px 6px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.location_weather {
+    flex-grow: 1;
+    background: rgba(52, 113, 226, 0.8);
+    box-shadow: 4px 2px 6px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    padding: 24px;
+    gap: 24px;
+    display: flex;
+}
+
+.location_weather>div:first-child {
+    width: 45%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+button {
+    padding: 8px 12px;
+    background: rgba(52, 113, 226, 0.8);
+    color: #ffffff;
+    border: 1px solid rgba(52, 113, 226, 0.8);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#city_name {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.time_date-city {
+    display: flex;
+    flex-direction: column;
+}
+
+#time-city {
+    font-size: 56px;
+    font-weight: 600;
+}
+
+#date-city {
+    font-size: 18px;
+}
+
+.weather_info-main {
+    display: flex;
+    flex-direction: column;
+}
+
+#temp {
+    font-size: 48px;
+}
+
+#weather_main {
+    font-size: 32px;
+}
+
+
+#weather_condition {
+    font-size: 18px;
+}
+
+.weather_info-details {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.info-details-box {
+    border-radius: 12px;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.box-heading {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.box-info {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.box-info svg {
+    width: 32px;
+    height: 32px;
+}
+
+.temp {
+    display: flex;
+    flex-shrink: 0x;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.temp>span {
+    flex-shrink: 0;
+}
+
+.search-input {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-icon>svg {
+    width: 100%;
+    height: 100%;
+}
+
+#location_search {
+    border: 0;
+    border-radius: 8px;
+    outline: none;
+    padding: 8px 8px 8px 32px;
+    background: rgba(0, 0, 0, 0.12);
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+input#location_search:-webkit-autofill,
+input#location_search:-webkit-autofill:focus {
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+#location_search::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#location_search::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.weather_now {
+    display: flex;
+    flex-direction: column;
+}
+
+.weather_now>div {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:767px) {
+    .weather_details {
+        flex-direction: column;
+    }
+
+    .location_details {
+        width: 100%;
+    }
+
+    .location_weather {
+        flex-direction: column;
+    }
+
+    .weather_info-main {
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+        gap: 12px;
+    }
+    .weather_now>div{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location_weather>div:first-child {
+        width: 100%;
+    }
+}
